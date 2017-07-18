@@ -1,0 +1,73 @@
+@charset "UTF-8";
+@import '_all-set';
+//sass组件---------------------------------
+@import 'd:/ws/ss/_sscss-set';
+@import 'd:/ws/ss/_sscss-mixin';
+/*首页test*/
+.ysy-index-0 .ysy-waik{@include ss(() (bgc #fff))}
+.ysy-waik {
+  & .ysy-index-0 {
+    //###############################--
+    & .n-header {
+      @include ss(() (maw 1200)(jzc));
+      &::after{
+        @include ss(() (con '')(db)(who));
+      }
+    }
+    & .ysy-logo {
+      @include ss(() (fl)(who auto)(mt 6)(ml 0));
+    }
+    & .header-nav {
+      @include ss(() (fr));
+    }
+    & .swiper-pagination-bullet {
+      @include ss(() (bgc #0A0A0A)(who 58 5)(bdrs 0)(op 0.1));
+    }
+    & .swiper-container-horizontal>.swiper-pagination {
+      @include ss(() (b 12));
+    }
+    & .swiper-pagination-bullet-active{
+      @include ss(() (bgc #1893D6)(op 1));
+    }
+    & .swiper-button-prev {
+      @include ss(() (bg 'b-b1.png')(wh 72 92)(op 0.3)(l 20));
+      &:hover{
+        @include ss(() (op 0.8));
+      }
+    }
+    & .swiper-button-next {
+      @include ss(() (bg 'b-2.png')(wh 72 92)(op 0.3)(r 20));
+      &:hover{
+        @include ss(() (op 0.8));
+      }
+    }
+    & .swiper-button-disabled{
+      @include ss(() (op 0));
+    }
+    & .ecareer-h-w {
+      @include ss((h 500) (pt 88));
+    }
+    & .tit_word_w .tit_word_p {
+      @include ss(() (t -28));
+    }
+    & .ecareerF{
+      & a {
+        @include ss((a) (c #666));
+        & p{
+          @include ss(() (fz 15));
+        }
+      }
+      & .ecareer_a_w {
+        @include ss( (mt 30)(h 248));
+
+      }
+    }
+    & .mart-w5 {
+      @include ss(() (pt 80)(h 780));
+    }
+    & .card-head {
+      @include ss(() (wh 200 200));
+    }
+    //####################################
+  }
+}

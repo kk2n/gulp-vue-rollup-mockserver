@@ -1,0 +1,1 @@
+"use strict";var ftit={init:function(){this.ftit={props:["text","t","myclass"],data:function(){return{}}},this.ftit.template='<div><div class="comm-form-title" :class="myclass"><span>{{text || t}}</span><em></em><slot></slot></div></div>',Vue.component("ftit",this.ftit)}};

@@ -1,0 +1,86 @@
+@charset "UTF-8";
+//-----------------------------------------------
+// For lk-project project At 2015-12-20 By likuan
+//-----------------------------------------------
+@import 'd:/ws/ss/_sscss-set';
+@import 'd:/ws/ss/_sscss-mixin';
+@import 'd:/ws/ss/_sscss-media'; //媒体查询ss8
+
+/*/+++++++++++++++++++++++++++++
+以下主要为选科后台的样式媒体查询
++++++++++++++++++++++++++++++/*/
+
+//媒体查询
+@include scmaw(1440px) { // 1281*1440
+body{
+  background-color: #ffffff;}
+  //##################################
+}
+
+@include scmaw(1280px) { // 1153*1280
+
+  ////中屏 1153*1280 End##############################
+}
+
+@include scmaw(1152px) { // 1025*1152
+
+  ////中屏 1025*1152 End##############################
+}
+
+@include scmaw(1024px) { //769*1024平板横屏
+
+  //769*1024平板横屏 End####################
+
+}
+
+@include scmaw(768px) { //0*768  手机屏或平板竖屏
+
+  //平板竖屏  End##############################################
+}
+
+@include scmaw(765px) { //0*765
+
+}
+
+@include scmaw(414px) { //0*414  手机屏或平板竖屏
+
+}
+
+@include ipad(l) { //平板横向 1024*768
+
+}
+
+@include ipad(p) { //平板纵向 768*1024
+
+}
+
+@include ios6p(p) { //iphone 6 plus  414*736
+
+}
+
+@include ios6(p) { //iphone 6  375*627
+
+}
+
+@include isaz(p) { //安卓360*567
+
+}
+
+@include blackberry-z30(p) { //安卓360*640
+
+}
+
+@include ios5(p) { //iphone 5 320*568
+
+}
+
+@include ios4(p) { //iphone 4 320*480
+
+}
+
+
+
+
+
+
+

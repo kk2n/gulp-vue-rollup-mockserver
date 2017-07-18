@@ -1,0 +1,1 @@
+var tit={init:function(){this.tit={props:["t1","t2","myclass"],mounted:function(){$(".tag-dn").removeClass("tag-dn")}};this.tit.template='<div><div class="sys-page-tit1"><div class="sys-main-top " :class="myclass"><h1><span>{{ t1 }}</span></h1><div class="sys-main-com">{{t2}}<slot></slot></div></div></div></div>';Vue.component('tit', this.tit)}}

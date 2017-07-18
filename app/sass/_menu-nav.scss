@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+//sass组件-----------------------------
+@import '_all-set';
+@import 'd:/ws/ss/_sscss-set';
+@import 'd:/ws/ss/_sscss-mixin';
+@import 'd:/ws/ss/_sscss-reset';
+//颜色表
+$ht-nav-bg:#fff;//系统-头部导航背景颜色
+$ht-nav-bdb:#ddd;//系统-头部导航的下边框
+
+//系统内部菜单样式
+.ysy-menu-c {
+  @include ss(() (wh 60 auto)(bg #0186D1 'caidan.png' l c y)(fl)(z 51)(poa)(t 50)(mih 944));
+  &>ul {
+    &>li{
+      @include ss(() (wh 100%));
+      //浮动的一级菜单提示
+      & .m-text-c {
+        @include ss(() (poa)(who 120 32)(p 0 24)(lh 30px)(c #fff)(l 68)(z 31)(bdrs 32)(fz 16)(mt 15)(t 50));
+        background-color: darken(#4D5256, 6%);
+        border: 1px solid darken(#4D5256, 10%);
+      }
+      //二级菜单开始
+      &>.menu-er-c{
+        @include ss(() (wh 210 800)(poa)(l 60)(t 0)(bgc #4D5256)(dn));
+        box-shadow: 0 0 4px darken(#4D5256,5%) inset;
+
+        & .m-er-con{
+          @include ss(() (who)(c #fff)(fw)(m 12 0 0));
+
+          & .icon-t{
+            @include ss(() (fl)(who 32 32)(bdrs 50%)(bgc lighten(#4D5256,10%))(m 20 0 20 20));
+          }
+          //菜单二级标题
+          & .muk-tit{
+            @include ss(() (who)(fl)(m 8 10)(fz 22)(lh 2.4));
+            letter-spacing: 1px;
+            -webkit-font-smoothing:antialiased;
+            -webkit-text-stroke: 0.2px #000;
+          }
+          //菜单二级标题简介
+          & .muk-con {
+            @include ss(() (who)(fz 14)(lh 22px)(cb)(m 20)(tal)(op 0.7)(fw)(ff $ff-yh));
+          }
+          & i{
+            @include ss((c #4D5256)(fz 32)(lh 1)(poa)(mt 0)(ml -16));
+          }
+          //菜单二级
+          & .erji-caid-n {
+            @include ss(() (who)(bdt)(mt 40));
+            border-color: lighten(#4D5256,6%);
+            & dl {
+              @include ss((who 100% 60) (lh 60px)(bdb)(tal)(fz 15)(cup));
+              border-color: lighten(#4D5256,6%);
+              transition:All 0.2s ease-in-out;
+              &:hover{
+                background-color: lighten(#4D5256,6%);
+              }
+              & a{
+                @include ss((a) (c #fff));
+              }
+              & dt{
+                @include ss(() (lh 60px)(fw)(pl 20));
+                transition:All 0.2s ease-in-out;
+                &:hover{
+                  padding-left: 25px;
+                }
+              }
+              & dd{
+                @include ss((who auto 60)(ml -20)(lh 60px)(pl 50)(bdt lighten(#4D5256,6%)));
+                border-color: lighten(#4D5256,6%);
+                background-color: darken(#4D5256,10%);
+                transition:All 0.2s ease-in-out;
+                &:hover{
+                  padding-left: 55px;
+                  background-color: lighten(#4D5256,6%);
+                  border-top:1px solid lighten(#4D5256,10%);
+                }
+              }
+              & dd.oonn-tt{
+                padding-left: 55px;
+                background-color: lighten(#4D5256,6%);
+                border-top:1px solid lighten(#4D5256,10%);
+              }
+
+            }
+            & dl.menu-on2{
+              @include ss((bgc #5b6166)());
+            }
+            & .has-three{
+              @include ss(() (bg 'xia-tou.png' 90% 28));
+            }
+            & .three-open{
+              @include ss(()(bg 'shang-tou.png' 90% 28));
+            }
+          }
+        }
+      }
+      &:hover{
+        background-color: lighten(#0186D1,6%);
+        &>.menu-er-c{
+          //@include ss(() (z 11)(db));
+        }
+      }
+    }
+    & .f-ico{
+      @include ss(() (tac));
+      &>i.menu-ico{
+        @include ss((por)(z 40) (fz 32)(c #fff)(lh 50px)(tac)(cup)(db)(who 60 50));
+        transition:All 0.3s ease-in-out;
+        &:hover{
+          height: 60px;
+          line-height: 60px;
+        }
+      }
+      &>i.dao-shi-ico{
+        @include ss((por)(z 40) (fz 32)(c #fff)(lh 50px)(tac)(cup)(db)(who 60 50));
+        transition:All 0.3s ease-in-out;
+        &:hover{
+          height: 60px;
+          line-height: 60px;
+        }
+      }
+      &>span{
+        @include ss(() (por)(c #fff)(mt -12)(db)(lh 32px)(dn));
+      }
+    }
+
+    &>.menu-on{
+      @include ss(() (bgc #4D5256));
+      &>.menu-er-c{
+        @include ss(() (db));
+      }
+
+      &:hover{
+        @include ss(() (bgc #4D5256));
+        & .menu-er-c{
+          @include ss(() (z 10));
+        }
+      }
+    }
+  }
+}
+//系统内部导航样式d
+.ysy-hou-waik{
+  & .ysy-head{
+    @include ss(() (who 100% 50)(bgc $ht-nav-bg)(pof)(t 0)(z 1020));
+    box-shadow: 0 0 6px lighten(#4D5256,20%);
+    & img {
+      float: left;
+    }
+  }
+  & .you-nav{
+    @include ss(() (wh)(fr)(pof)(z 1030)(r)(tar));
+    & .nav-ico {
+      @include ss((fl) (lh 50px)(fz 14)(c #AEAEAE)(mr 24)(ti 10)(ff $ff));
+      & i{
+        @include ss(() (mr 4));
+      }
+    }
+    //提醒功能
+    & .tixing-list {
+      @include ss((who 270) (poa)(bgc)(bd)(bdb 0));
+      & ul {
+        @include ss((who) (bdb)(p 0 12));
+        & li{
+          @include ss(() (p 18 4)(fl)(fz 16));
+        }
+      }
+    }
+    & .gen-tishi{
+      @include ss(()(ho 50));
+      & .wh-tou-ico{
+        @include ss(() (who 30 30));
+      }
+      & em{
+        @include ss(() (fs)(p 0 6)(cup));
+      }
+      & i {
+        @include ss(() (fs)(p 2 8)(bdrs 12)(bgc #5BC0DE)(c #fff)(cup));
+      }
+    }
+  }
+  & .caid-tub{
+    @include ss(() (pof)(r 18)(t 0)(z 20000)(dn)(cup));
+    & i{
+      @include ss(() (fz 32)(c lighten(#4D5256,20%)));
+    }
+  }
+
+  //底部foot样式
+  & .jiang-space {
+    @include ss(() (hx)(h 38)(bg none));
+  }
+  & .ysy-foot{
+    @include ss(()(tac) (who 100% 38)(pof)(b 0)(z 1020)(ti 280));
+    & .foot-b{
+      @include ss(() (bg #fff)(bdt)(who auto 38)(lh 38px)(ml 270)(ti -1%));
+    }
+  }
+}
